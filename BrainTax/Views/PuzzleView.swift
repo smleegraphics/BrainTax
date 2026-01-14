@@ -165,6 +165,7 @@ struct PuzzleView: View {
     
     // MARK: - Feedback Section
     
+    @ViewBuilder
     private var feedbackSection: some View {
         if !viewModel.feedbackMessage.isEmpty {
             Text(viewModel.feedbackMessage)
@@ -173,7 +174,7 @@ struct PuzzleView: View {
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(viewModel.feedbackColor.opacity(0.1))
-                .cornerRadius(8) as! EmptyView
+                .cornerRadius(8)
         } else {
             EmptyView()
         }

@@ -18,6 +18,156 @@
             endingLineNumber = "15"
             landmarkName = "PuzzleStore"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - 83c3acbcb66f5d6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of BrainTax.PuzzleStore.puzzles : Swift.Array&lt;BrainTax.AnyPuzzle&gt;"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - 12f677d13139d9d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of BrainTax.PuzzleStore.puzzles : Swift.Array&lt;BrainTax.AnyPuzzle&gt;"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Services/PuzzleStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - 8359a0a4bb099818"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.PuzzleStore.puzzles.getter : Swift.Array&lt;BrainTax.AnyPuzzle&gt;"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Services/PuzzleStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - 70dfa3ffda91738c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.PuzzleStore.puzzles.setter : Swift.Array&lt;BrainTax.AnyPuzzle&gt;"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Services/PuzzleStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - 93ec3454155696bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.PuzzleStore.puzzles.modify : Swift.Array&lt;BrainTax.AnyPuzzle&gt;"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Services/PuzzleStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - cae9cbbc8120946c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.PuzzleStore.$puzzles.getter : Combine.Published&lt;Swift.Array&lt;BrainTax.AnyPuzzle&gt;&gt;.Publisher"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Services/PuzzleStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - d54836d12d7b977f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.PuzzleStore.$puzzles.setter : Combine.Published&lt;Swift.Array&lt;BrainTax.AnyPuzzle&gt;&gt;.Publisher"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/%3Cstdin%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "E9C2658C-739D-4871-AD29-60EE825C3D80 - f4608ac63f7182f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.PuzzleStore.$puzzles.modify : Combine.Published&lt;Swift.Array&lt;BrainTax.AnyPuzzle&gt;&gt;.Publisher"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Services/PuzzleStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1A67CC3-0078-4E2F-9A1D-8E3F10A52F17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrainTax/Views/ChessBoardView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "handleSquareTap(square:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F1A67CC3-0078-4E2F-9A1D-8E3F10A52F17 - bb8fdf9b0321ddb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.ChessBoardView.handleSquareTap(square: BrainTax.BoardSquare) -&gt; ()"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes">
+               </Location>
+               <Location
+                  uuid = "F1A67CC3-0078-4E2F-9A1D-8E3F10A52F17 - 18c316145c83824f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrainTax.ChessBoardView.handleSquareTap(square: BrainTax.BoardSquare) -&gt; ()"
+                  moduleName = "BrainTax.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthalee/Documents/Documents%20-%20Samantha%E2%80%99s%20MacBook%20Pro/repos/BrainTax/BrainTax/Views/ChessBoardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

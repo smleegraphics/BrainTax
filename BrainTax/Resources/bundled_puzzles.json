@@ -1,0 +1,22 @@
+{
+  "puzzles": [
+    {
+      "type": "chess",
+      "id": "chess_001",
+      "question": "White to move. Find a good opening move.",
+      "difficulty": "easy",
+      "hint": "Common opening moves include moving the central pawns or developing knights.",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "correctMoves": ["e2e4", "e2e3", "d2d4", "d2d3", "g1f3", "b1c3"]
+    },
+    {
+      "type": "chess",
+      "id": "chess_002",
+      "question": "Black to move. Find a tactical opportunity.",
+      "difficulty": "medium",
+      "hint": "Consider piece coordination and threats.",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "correctMoves": ["e4e5", "Nf3g5"]
+    }
+  ]
+}

@@ -2,20 +2,30 @@
 //  ContentView.swift
 //  BrainTax
 //
-//  Created by Samantha Lee on 1/13/26.
+//  Main content view that displays puzzles
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var puzzleStore = PuzzleStore()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            if let puzzle = puzzleStore.currentPuzzle {
+                PuzzleView(puzzle: puzzle)
+                    .navigationTitle("BrainTax")
+                    .navigationBarTitleDisplayMode(.inline)
+            } else {
+                VStack {
+                    ProgressView()
+                    Text("Loading puzzles...")
+                        .foregroundColor(.secondary)
+                        .padding()
+                }
+                .navigationTitle("BrainTax")
+            }
         }
-        .padding()
     }
 }
 

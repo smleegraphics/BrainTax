@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 /// Represents a chess piece
 struct ChessPiece: Identifiable {
@@ -145,5 +146,26 @@ class ChessBoard: ObservableObject {
     /// Get square from row and column
     func square(row: Int, col: Int) -> BoardSquare {
         BoardSquare(row: row, col: col)
+    }
+    
+    /// Apply a move in UCI format (e.g., "e2e4") and update the board with animation
+    func applyMove(uci: String) {
+        // Expect exactly 4 characters like e2e4
+        guard uci.count >= 4 else { return }
+        let fromId = String(uci.prefix(2)).lowercased()
+        let toId = String(uci.dropFirst(2).prefix(2)).lowercased()
+        guard let from = BoardSquare(squareId: fromId), let to = BoardSquare(squareId: toId) else { return }
+        guard from.row >= 0 && from.row < 8 && from.col >= 0 && from.col < 8 else { return }
+        guard to.row >= 0 && to.row < 8 && to.col >= 0 && to.col < 8 else { return }
+        let movingPiece = squares[from.row][from.col]
+        // Clear selection and legal moves
+        clearSelection()
+        // Animate the board change
+        DispatchQueue.main.async {
+            withAnimation(Animation.easeInOut(duration: 0.25)) {
+                self.squares[from.row][from.col] = nil
+                self.squares[to.row][to.col] = movingPiece
+            }
+        }
     }
 }

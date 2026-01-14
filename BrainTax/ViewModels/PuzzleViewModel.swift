@@ -55,7 +55,14 @@ class PuzzleViewModel: ObservableObject {
     
     /// Handle move from chess board
     func handleChessMove(_ move: String) {
+        // Check answer
+        let wasSolvedBefore = isSolved
         submitAnswer(move)
+        
+        // If the move is correct (puzzle solved or move accepted), apply it on the board with animation
+        if let puzzle = currentPuzzle, puzzle.isAnswerCorrect(move), let board = chessBoard {
+            board.applyMove(uci: move)
+        }
         
         // Update legal moves visualization (for future enhancement)
         if let board = chessBoard, !isSolved {

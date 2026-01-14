@@ -74,6 +74,7 @@ struct ChessBoardView: View {
                                 Text(pieceSymbol(piece))
                                     .font(.system(size: squareSize * 0.7))
                                     .foregroundColor(piece.color == .white ? .white : .black)
+                                    .transition(.identity)
                             }
                         }
                         .onTapGesture {
@@ -90,14 +91,18 @@ struct ChessBoardView: View {
         if let start = moveStart {
             // Second tap - complete the move
             let move = "\(start.id)\(square.id)"
-            onMoveSelected(move)
-            moveStart = nil
-            board.clearSelection()
+            withAnimation(.easeInOut(duration: 0.25)) {
+                onMoveSelected(move)
+                moveStart = nil
+                board.clearSelection()
+            }
         } else {
             // First tap - select starting square
             if board.piece(at: square) != nil {
-                moveStart = square
-                board.selectedSquare = square
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    moveStart = square
+                    board.selectedSquare = square
+                }
                 // For now, we'll show legal moves after move validation in the view model
                 // This is a simplified version - in a full implementation, we'd calculate legal moves here
             }
@@ -126,3 +131,4 @@ struct ChessBoardView: View {
         return piece.color == .white ? whiteSymbol : blackSymbol
     }
 }
+

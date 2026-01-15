@@ -77,15 +77,21 @@ class ChessBoard: ObservableObject {
     @Published var squares: [[ChessPiece?]] = Array(repeating: Array(repeating: nil, count: 8), count: 8)
     @Published var selectedSquare: BoardSquare?
     @Published var legalMoves: [String] = []
+    @Published var sideToMove: PieceColor = .white
     
     /// Parse a FEN string and populate the board
     func loadFromFEN(_ fen: String) {
         let components = fen.split(separator: " ")
         guard !components.isEmpty else { return }
-        
+
+        // Parse side to move (second component: "w" or "b")
+        if components.count > 1 {
+            sideToMove = components[1] == "w" ? .white : .black
+        }
+
         let boardPart = components[0]
         let ranks = boardPart.split(separator: "/")
-        
+
         // Clear the board
         squares = Array(repeating: Array(repeating: nil, count: 8), count: 8)
         

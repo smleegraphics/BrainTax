@@ -1,10 +1,10 @@
 # Xcode user-specific files
-xcuserdata/
-*.xcuserdatad/
+**/xcuserdata/
+**/*.xcuserdatad/
 
 # Xcode workspace settings
-*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
-*.xcworkspace/xcuserdata/
+**/*.xcworkspace/xcshareddata/
+**/*.xcworkspace/xcuserdata/
 
 # Build products
 build/

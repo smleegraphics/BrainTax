@@ -1,0 +1,18 @@
+# Xcode user-specific files
+xcuserdata/
+*.xcuserdatad/
+
+# Xcode workspace settings
+*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.xcworkspace/xcuserdata/
+
+# Build products
+build/
+DerivedData/
+
+# CocoaPods (if used later)
+Pods/
+
+# Swift Package Manager
+.build/
+.swiftpm/

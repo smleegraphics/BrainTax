@@ -16,3 +16,4 @@ Pods/
 # Swift Package Manager
 .build/
 .swiftpm/
+lichess_db_puzzle.csv

@@ -1,0 +1,19 @@
+# Xcode user-specific files
+**/xcuserdata/
+**/*.xcuserdatad/
+
+# Xcode workspace settings
+**/*.xcworkspace/xcshareddata/
+**/*.xcworkspace/xcuserdata/
+
+# Build products
+build/
+DerivedData/
+
+# CocoaPods (if used later)
+Pods/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+lichess_db_puzzle.csv

@@ -124,6 +124,9 @@ struct PuzzleView: View {
     private var chessInteractiveArea: some View {
         VStack(spacing: 16) {
             if let board = viewModel.chessBoard {
+                Text(board.sideToMove == .white ? "White to move" : "Black to move")
+                    .font(.headline)
+
                 ChessBoardView(board: board) { move in
                     viewModel.handleChessMove(move)
                 }

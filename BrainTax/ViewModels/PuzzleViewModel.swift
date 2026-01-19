@@ -17,59 +17,35 @@ class PuzzleViewModel: ObservableObject {
     @Published var feedbackColor: Color = .primary
     @Published var isSolved: Bool = false
     @Published var showHint: Bool = false
-    
-    // Chess-specific
-    @Published var chessBoard: ChessBoard?
-    
-    private var puzzleType: PuzzleType = .chess
-    
+    @Published var puzzleResetToken: UUID = UUID()
+
     /// Load a puzzle into the view model
     func loadPuzzle(_ puzzle: AnyPuzzle) {
         currentPuzzle = puzzle
-        puzzleType = puzzle.type
         isSolved = false
         feedbackMessage = ""
         showHint = false
-        
-        // Initialize chess board if it's a chess puzzle
-        if let chessPuzzle = puzzle.asChessPuzzle() {
-            let board = ChessBoard()
-            board.loadFromFEN(chessPuzzle.fen)
-            chessBoard = board
-        }
+        puzzleResetToken = UUID()
     }
-    
+
     /// Submit an answer for the current puzzle
-    func submitAnswer(_ answer: Any) {
-        guard let puzzle = currentPuzzle else { return }
-        
+    /// Returns true if the answer is correct
+    @discardableResult
+    func submitAnswer(_ answer: Any) -> Bool {
+        guard let puzzle = currentPuzzle else { return false }
+
         if puzzle.isAnswerCorrect(answer) {
             isSolved = true
-            feedbackMessage = "Correct! 🎉"
+            feedbackMessage = "Correct!"
             feedbackColor = .green
+            return true
         } else {
             feedbackMessage = "Incorrect. Try again!"
             feedbackColor = .red
+            return false
         }
     }
-    
-    /// Handle move from chess board
-    func handleChessMove(_ move: String) {
-        // Check answer
-        let wasSolvedBefore = isSolved
-        submitAnswer(move)
-        
-        // If the move is correct (puzzle solved or move accepted), apply it on the board with animation
-        if let puzzle = currentPuzzle, puzzle.isAnswerCorrect(move), let board = chessBoard {
-            board.applyMove(uci: move)
-        }
-        
-        // Update legal moves visualization (for future enhancement)
-        if let board = chessBoard, !isSolved {
-            board.legalMoves = []
-        }
-    }
-    
+
     /// Show hint for current puzzle
     func showPuzzleHint() {
         showHint = true
@@ -81,7 +57,7 @@ class PuzzleViewModel: ObservableObject {
             feedbackColor = .secondary
         }
     }
-    
+
     /// Reset current puzzle
     func resetPuzzle() {
         guard let puzzle = currentPuzzle else { return }

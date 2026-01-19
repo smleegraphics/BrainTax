@@ -123,13 +123,15 @@ struct PuzzleView: View {
     
     private var chessInteractiveArea: some View {
         VStack(spacing: 16) {
-            if let board = viewModel.chessBoard {
-                Text(board.sideToMove == .white ? "White to move" : "Black to move")
-                    .font(.headline)
-
-                ChessBoardView(board: board) { move in
-                    viewModel.handleChessMove(move)
-                }
+            if let chessPuzzle = puzzle.asChessPuzzle() {
+                ChessPuzzleView(
+                    puzzle: chessPuzzle,
+                    resetToken: viewModel.puzzleResetToken,
+                    onMove: { move in
+                        return viewModel.submitAnswer(move)
+                    }
+                )
+                .id(chessPuzzle.id)
                 .padding()
             } else {
                 ProgressView()

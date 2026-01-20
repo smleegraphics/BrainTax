@@ -11,7 +11,24 @@ import SwiftUI
 struct BrainTaxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Apps", systemImage: "square.grid.2x2.fill")
+                    }
+
+                ContentView()
+                    .tabItem {
+                        Label("Practice", systemImage: "puzzlepiece.fill")
+                    }
+
+                NavigationView {
+                    DNSSettingsView()
+                }
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }
+            }
         }
     }
 }

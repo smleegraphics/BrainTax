@@ -1,19 +1,12 @@
-# Xcode user-specific files
-**/xcuserdata/
-**/*.xcuserdatad/
+# Dependencies & build output
+node_modules/
+dist/
+*.tsbuildinfo
 
-# Xcode workspace settings
-**/*.xcworkspace/xcshareddata/
-**/*.xcworkspace/xcuserdata/
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
 
-# Build products
-build/
-DerivedData/
-
-# CocoaPods (if used later)
-Pods/
-
-# Swift Package Manager
-.build/
-.swiftpm/
+# Local-only source data (multi-GB Lichess dump; see scripts/build_chess_puzzles.py)
 lichess_db_puzzle.csv
